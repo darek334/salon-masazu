@@ -64,6 +64,7 @@ salon-masazu/
 │   ├.................            # następna tabela
 │
 ├── documentation/                # Folder dokumentacji
+│   ├── organization/             # test
 │   └── main-architecture/        # Założenia architektoniczne
 │
 ├── .gitignore
