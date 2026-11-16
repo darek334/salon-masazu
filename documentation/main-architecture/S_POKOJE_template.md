@@ -1,62 +1,25 @@
-# S_POKOJE
+Tabela słownikowa: S_POKOJE
+Opis: Tabela przechowuje słownik pomieszczeń dostępnych w salonie masażu. Umożliwia identyfikację pokoi, ich klasyfikację oraz określenie ich dostępności.
+Nazwa kolumny	Typ danych	Klucz	Wymagane	Opis
+ID_POKOJU	INT	PK	TAK	Unikalny identyfikator pokoju
+NAZWA_POKOJU	VARCHAR(50)	-	TAK	Nazwa pokoju
+TYP_POKOJU	VARCHAR(30)	-	TAK	Rodzaj pomieszczenia
+NUMER_POKOJU	VARCHAR(10)	-	TAK	Numer pokoju
+POJEMNOSC	INT	-	TAK	Maksymalna liczba osób w pokoju
+STATUS	VARCHAR(20)	-	TAK	Aktualny status pokoju
+OPIS	VARCHAR(255)	-	NIE	Dodatkowe informacje o pokoju
 
-## Tabela słownikowa
+Przykładowe wartości słownikowe
+ID_POKOJU	NAZWA_POKOJU	TYP_POKOJU	NUMER_POKOJU	POJEMNOSC	STATUS	OPIS
+1	Pokój relaksacyjny	STANDARD	P01	1	AKTYWNY	Pokój do masażu relaksacyjnego
+2	Pokój terapeutyczny	TERAPEUTYCZNY	P02	1	AKTYWNY	Pokój do masażu leczniczego
+3	Pokój dla par	DLA_PAR	P03	2	AKTYWNY	Pokój z dwoma stanowiskami masażu
+4	Pokój VIP	VIP	P04	1	AKTYWNY	Pokój do masażu premium
+5	Pokój rehabilitacyjny	REHABILITACYJNY	P05	1	NIEAKTYWNY	Pokój tymczasowo wyłączony z użytku
 
-  -----------------------------------------------------------------------
-  ID_POKOJU               NAZWA_POKOJU            OPIS
-  ----------------------- ----------------------- -----------------------
-  1                       Gabinet masażu          Pomieszczenie
-                          klasycznego             przeznaczone do
-                                                  wykonywania masażu
-                                                  klasycznego
-
-  2                       Gabinet masażu          Pomieszczenie do
-                          relaksacyjnego          wykonywania masaży
-                                                  relaksacyjnych
-
-  3                       Gabinet masażu          Pomieszczenie
-                          leczniczego             przeznaczone do masaży
-                                                  terapeutycznych
-
-  4                       Gabinet masażu          Pomieszczenie do masaży
-                          sportowego              dla osób aktywnych
-                                                  fizycznie
-
-  5                       Gabinet masażu          Pomieszczenie
-                          tajskiego               przystosowane do
-                                                  wykonywania masażu
-                                                  tajskiego
-
-  6                       Poczekalnia             Pomieszczenie dla
-                                                  klientów oczekujących
-                                                  na wizytę
-
-  7                       Recepcja                Pomieszczenie obsługi
-                                                  klientów i rezerwacji
-                                                  wizyt
-
-  8                       Zaplecze pracownicze    Pomieszczenie
-                                                  przeznaczone dla
-                                                  pracowników
-
-  9                       Magazyn                 Pomieszczenie do
-                                                  przechowywania
-                                                  ręczników, olejków i
-                                                  wyposażenia
-  -----------------------------------------------------------------------
-
-## Struktura tabeli
-
-  Pole           Typ danych     Klucz   Opis
-  -------------- -------------- ------- ----------------------------------------------
-  ID_POKOJU      INT            PK      Unikalny identyfikator rodzaju pomieszczenia
-  NAZWA_POKOJU   VARCHAR(50)    \-      Nazwa rodzaju pomieszczenia
-  OPIS           VARCHAR(255)   \-      Opis przeznaczenia pomieszczenia
-
-## Szablon do kolejnych tabel słownikowych
-
-  Pole               Typ danych     Klucz   Opis
-  ------------------ -------------- ------- -------------------------
-  ID\_\[NAZWA\]      INT            PK      Unikalny identyfikator
-  NAZWA\_\[NAZWA\]   VARCHAR(50)    \-      Nazwa elementu słownika
-  OPIS               VARCHAR(255)   \-      Opis elementu
+Reguły biznesowe
+- ID_POKOJU jest kluczem głównym (PK).
+- NUMER_POKOJU musi być unikalny.
+- POJEMNOSC musi być większa od 0.
+- STATUS może przyjmować wartości: AKTYWNY, NIEAKTYWNY, W_REMONT.
+- TYP_POKOJU określa przeznaczenie pomieszczenia.
