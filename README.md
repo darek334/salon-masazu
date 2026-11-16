@@ -64,7 +64,7 @@ salon-masazu/
 │   ├.................            # następna tabela
 │
 ├── documentation/                # Folder dokumentacji
-│   ├── organization/             # test
+│   ├── jira/                     # Połącznie Jira
 │   └── main-architecture/        # Założenia architektoniczne
 │
 ├── .gitignore
