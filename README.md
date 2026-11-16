@@ -76,6 +76,7 @@ salon-masazu/
 ## Organizacja pracy
 
 Do zarządzania zadaniami i monitorowania postępu prac wykorzystywana jest platforma Jira.
+[Salon Masażu – Jira](https://darek334.atlassian.net/jira/software/projects/SM/summary)
 
 GitHub służy do przechowywania kodu źródłowego, dokumentacji technicznej oraz historii zmian w projekcie.
 
