@@ -1,6 +1,6 @@
 ## Używamy polskich nazw
 
-! Używamy składni pod MySQL
+❗Używamy składni pod MySQL
 
 ## Schemat początku nazwy:
 
@@ -24,6 +24,8 @@ Przykład:
 ```
 
 ## Przykładowy kod tabeli
+
+❗Używamy składni pod MySQL
 
 ```text
 CREATE TABLE `S_Przykladowa_Tabela` (
