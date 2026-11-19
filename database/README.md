@@ -1,5 +1,38 @@
-# Database
+# Główny katalog folderów tabel, które wrzucamy według schematu
 
-Moduł **Database** odpowiada za przechowywanie i organizację danych aplikacji Vistula Salon Masażu. Zapewnia strukturę bazy danych niezbędną do prawidłowego funkcjonowania systemu.
+## Używamy polskich nazw
 
-Baza danych została oparta na systemie MySQL. Komunikacja z nią odbywa się za pośrednictwem warstwy backendowej, z wykorzystaniem biblioteki PDO.
+❗Używamy składni pod MySQL
+
+## Schemat początku nazwy:
+
+- `S_`    – tabele słownikowe.
+- `X_`    – rozszerzenia tabel słownikowych.
+- `N_`    – pierwszy poziom tabel relacyjnych.
+- `N2_`    – drugi poziom tabel relacyjnych.
+- `N3_`    – kolejny poziom...
+
+Przykład:
+
+    Nazwa tabeli:
+    - S_Przykladowa_Tabela                #tabela słownikowa
+    Nazwa pliku:
+    - S_Przykladowa_Tabela.sql            #tabela słownikowa
+
+```text
+└── database/                             # nasz główny katalog plików do bazy danych
+    └── S_Przykladowa_Tabela/             # katalog
+        └── S_Przykladowa_Tabela.sql      # plik z definicją tabeli
+```
+
+## Przykładowy kod tabeli
+
+❗Używamy składni pod MySQL
+
+```text
+CREATE TABLE `S_Przykladowa_Tabela` (
+    `Id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `Nazwa` VARCHAR(100) NOT NULL,
+    `Opis` TEXT NULL
+);
+```
