@@ -1,8 +1,10 @@
 # Główny katalog folderów tabel, które wrzucamy według schematu
 
-## Nazywanie katalogów, plików i tabel
+## Używamy polskich nazw
 
-## Podstawa schemat:
+❗Używamy składni pod MySQL
+
+## Schemat początku nazwy:
 
 - `S_`    – tabele słownikowe.
 - `X_`    – rozszerzenia tabel słownikowych.
@@ -10,16 +12,27 @@
 - `N2_`    – drugi poziom tabel relacyjnych.
 - `N3_`    – kolejny poziom...
 
-Dala każdej tabeli robisz oddzielny folder a potem wrzucasz do niego plik z definicją tabeli.
 Przykład:
 
     Nazwa tabeli:
-    - S_Pokoj
+    - S_Przykladowa_Tabela                #tabela słownikowa
     Nazwa pliku:
-    - S_Pokoj.sql
+    - S_Przykladowa_Tabela.sql            #tabela słownikowa
 
 ```text
-└── database/             # nasz główny katalog plików do bazy danych
-    └── S_Pokoj/          # katalog
-        └── S_Pokoj.sql   # plik z definicją tabeli
+└── database/                             # nasz główny katalog plików do bazy danych
+    └── S_Przykladowa_Tabela/             # katalog
+        └── S_Przykladowa_Tabela.sql      # plik z definicją tabeli
+```
+
+## Przykładowy kod tabeli
+
+❗Używamy składni pod MySQL
+
+```text
+CREATE TABLE `S_Przykladowa_Tabela` (
+    `Id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `Nazwa` VARCHAR(100) NOT NULL,
+    `Opis` TEXT NULL
+);
 ```
